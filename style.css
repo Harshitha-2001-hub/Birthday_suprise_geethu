@@ -148,3 +148,17 @@ transform:scale(1);
 opacity:1;
 }
 }
+.heart{
+  position: fixed;
+  top: -10px;
+  font-size: 25px;
+  animation: fall linear forwards;
+  z-index: 9999;
+}
+
+@keyframes fall{
+  to{
+    transform: translateY(100vh);
+    opacity:0;
+  }
+}
