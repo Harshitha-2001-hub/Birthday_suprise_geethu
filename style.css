@@ -1,0 +1,150 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+text-align:center;
+overflow-x:hidden;
+overflow-y:auto;
+color:white;
+}
+
+.intro{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+animation:fadeout 4s forwards;
+}
+
+.intro h1{
+font-size:60px;
+color:white;
+}
+
+.intro h2{
+margin-top:20px;
+font-size:35px;
+}
+
+@keyframes fadeout{
+0%{opacity:1;}
+80%{opacity:1;}
+100%{
+opacity:0;
+display:none;
+visibility:hidden;
+}
+}
+
+.container{
+padding-top:30px;
+}
+
+.container h1{
+font-size:50px;
+}
+
+.message{
+margin:20px;
+font-size:22px;
+line-height:35px;
+}
+
+#photo{
+    width: 90%;
+    max-width: 900px;
+    height: 80vh;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 30px rgba(255,255,255,.7);
+}
+
+audio{
+margin-top:20px;
+}
+
+.video{
+    display:none;
+    margin-top:40px;
+}
+
+video{
+width:80%;
+border-radius:20px;
+box-shadow:0 0 30px white;
+}
+
+.ending{
+margin-top:60px;
+padding-bottom:50px;
+}
+
+.heart{
+position:fixed;
+top:-20px;
+font-size:25px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-20px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+.final-message{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg,#ff4b8b,#ff9a9e,#ffd6e7);
+    color:white;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:30px;
+    z-index:9999;
+    animation:zoomIn 2s;
+}
+
+.final-message h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.final-message h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.final-message p{
+    font-size:28px;
+    line-height:45px;
+}
+
+@keyframes zoomIn{
+from{
+transform:scale(.4);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
